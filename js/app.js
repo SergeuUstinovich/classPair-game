@@ -69,7 +69,7 @@ function startGame(rootBlock, cardNumber) {
 
     const list = document.createElement('ul')
     list.classList.add('list')
-    list.style = `grid-template-columns: repeat(${cardNumber}, 1fr)`
+    // list.style = `grid-template-columns: repeat(${cardNumber}, 1fr)`
 
     for (let cards of arrCards) {
     const cardClass = new AmazingCard(list, cards, flip) 
@@ -176,16 +176,20 @@ function checkOfParity(numb) {
     return null; 
 }
 
+
+
 class Card {
     _open = false;
     _success = false;
     
       constructor(container, cardNumber, flip) {
         this.card = document.createElement('li');
-        
+        const cardWidth = rootBlock.offsetWidth * 0.85 / Math.sqrt(arrCards.length);
+        // const cardHeight = rootBlock.offsetHeight / Math.sqrt(arrCards.length);
+        console.log(cardWidth) 
         this.cardNumber = cardNumber;
         this.card.classList.add('card');
-        
+        this.card.style = `width: ${cardWidth}px; height: ${cardWidth}px;`;
         this.number = cardNumber;
         this.card.addEventListener('click', () => {
           if(this.open === false && this.success === false){
