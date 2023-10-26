@@ -1,4 +1,4 @@
-export class Card {
+class Card {
   _open = false;
   _success = false;
   
