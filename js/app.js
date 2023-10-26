@@ -1,4 +1,4 @@
-import { AmazingCard } from "/js/AmazingCard.js";
+import { AmazingCard } from "js/AmazingCard.js";
 
 const rootBlock = document.getElementById('root');
 const timeCounter = document.getElementById('timeOut');
