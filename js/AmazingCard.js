@@ -1,4 +1,4 @@
-import { Card } from "/js/Card.js";
+import { Card } from "js/Card.js";
 
 export class AmazingCard extends Card {
     constructor(container, cardNumber, flip) {
